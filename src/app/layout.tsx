@@ -6,6 +6,7 @@ import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Heroic Finds - Premium Action Figures & Collectibles",
+  description: "Discover the greatest collection of action figures featuring your favorite superheroes and legendary characters. Marvel, DC, Anime, Star Wars and more!",
 };
 
 export default function RootLayout({
@@ -35,12 +36,13 @@ export default function RootLayout({
         <QueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
             <TooltipProvider>
-              {children}
+              <Header />
+              <main>{children}</main>
               <Toaster />
               <Sonner />
             </TooltipProvider>
