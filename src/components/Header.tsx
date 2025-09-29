@@ -22,33 +22,33 @@ const categories = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-hero-navy via-hero-gray to-hero-navy backdrop-blur-md border-b border-hero-blue/30 shadow-xl shadow-hero-blue/10">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex items-center space-x-1">
-              <div className="w-8 h-8 hero-blue-gradient rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-lg">H</span>
+              <div className="w-10 h-10 hero-blue-gradient rounded-xl flex items-center justify-center shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
+                <span className="text-white font-bold text-xl tracking-wide">H</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-orange-300 bg-clip-text text-transparent tracking-wide">
                 HEROIC FINDS
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">
+                  <Link href="/products" className="text-sm font-semibold text-gray-200 hover:text-blue-300 transition-all duration-300 hover:scale-105 px-3 py-2 rounded-lg hover:bg-hero-blue/10">
                     Shop
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-semibold text-gray-200 hover:text-blue-300 transition-all duration-300 hover:scale-105 px-3 py-2 rounded-lg hover:bg-hero-blue/10">
                     Categories
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -67,13 +67,13 @@ export default function Header() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/collections" className="text-sm font-medium hover:text-primary transition-colors">
+                  <Link href="/collections" className="text-sm font-semibold text-gray-200 hover:text-blue-300 transition-all duration-300 hover:scale-105 px-3 py-2 rounded-lg hover:bg-hero-blue/10">
                     Collections
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
+                  <Link href="/about" className="text-sm font-semibold text-gray-200 hover:text-blue-300 transition-all duration-300 hover:scale-105 px-3 py-2 rounded-lg hover:bg-hero-blue/10">
                     About
                   </Link>
                 </NavigationMenuItem>
@@ -88,7 +88,7 @@ export default function Header() {
               <Input
                 type="search"
                 placeholder="Search heroes & figures..."
-                className="pl-10 pr-4"
+                className="pl-10 pr-4 bg-hero-gray/50 border-hero-blue/30 text-white placeholder:text-gray-400 focus:border-hero-blue focus:ring-hero-blue/20 transition-all duration-300"
               />
             </div>
           </div>
@@ -96,17 +96,17 @@ export default function Header() {
           {/* Right side buttons */}
           <div className="flex items-center space-x-2">
             {/* Mobile search */}
-            <Button variant="ghost" size="sm" className="lg:hidden">
+            <Button variant="ghost" size="sm" className="lg:hidden text-gray-200 hover:text-blue-300 hover:bg-hero-blue/10 transition-all duration-300">
               <Search className="h-4 w-4" />
             </Button>
 
             {/* User account */}
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="text-gray-200 hover:text-blue-300 hover:bg-hero-blue/10 transition-all duration-300">
               <User className="h-4 w-4" />
             </Button>
 
             {/* Shopping cart */}
-            <Button variant="ghost" size="sm" className="relative">
+            <Button variant="ghost" size="sm" className="relative text-gray-200 hover:text-blue-300 hover:bg-hero-blue/10 transition-all duration-300">
               <ShoppingCart className="h-4 w-4" />
               <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center text-xs hero-orange-gradient">
                 0
@@ -114,7 +114,7 @@ export default function Header() {
             </Button>
 
             {/* Mobile menu */}
-            <Button variant="ghost" size="sm" className="md:hidden">
+            <Button variant="ghost" size="sm" className="md:hidden text-gray-200 hover:text-blue-300 hover:bg-hero-blue/10 transition-all duration-300">
               <Menu className="h-4 w-4" />
             </Button>
           </div>

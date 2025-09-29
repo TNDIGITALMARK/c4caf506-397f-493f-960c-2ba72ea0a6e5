@@ -19,7 +19,7 @@ export default function ProductCard({ product, className = '' }: ProductCardProp
     : 0;
 
   return (
-    <Card className={`product-card group cursor-pointer ${className}`}>
+    <Card className={`product-card group cursor-pointer transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 ${className}`}>
       <CardContent className="p-0">
         <div className="relative">
           <Link href={`/products/${product.id}`}>
@@ -62,18 +62,18 @@ export default function ProductCard({ product, className = '' }: ProductCardProp
           {/* Quick add to cart button */}
           <Button
             size="sm"
-            className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hero-blue-gradient"
+            className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hero-blue-gradient shadow-lg hover:shadow-blue-500/50 rounded-xl transform hover:scale-110"
             disabled={!product.inStock}
           >
             <ShoppingCart className="h-4 w-4" />
           </Button>
         </div>
 
-        <div className="p-4">
+        <div className="p-5">
           <Link href={`/products/${product.id}`}>
             <div className="space-y-2">
               {/* Product name */}
-              <h3 className="font-semibold text-sm line-clamp-2 group-hover:text-primary transition-colors">
+              <h3 className="font-bold text-base line-clamp-2 group-hover:text-blue-300 transition-colors duration-300">
                 {product.name}
               </h3>
 
@@ -102,7 +102,7 @@ export default function ProductCard({ product, className = '' }: ProductCardProp
 
               {/* Price */}
               <div className="flex items-center gap-2">
-                <span className="text-lg font-bold text-primary">
+                <span className="text-xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   ${product.price.toFixed(2)}
                 </span>
                 {product.originalPrice && (
@@ -113,7 +113,7 @@ export default function ProductCard({ product, className = '' }: ProductCardProp
               </div>
 
               {/* Category */}
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-sm font-semibold bg-hero-blue/20 text-blue-300 border border-blue-400/30 hover:bg-hero-blue/30 transition-colors duration-300">
                 {product.category}
               </Badge>
             </div>

@@ -47,32 +47,32 @@ export default function HeroBanner() {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
-            <div className="flex flex-col items-center space-y-3 text-center">
-              <div className="p-3 rounded-full bg-blue-600/20 border border-blue-500">
-                <Shield className="h-6 w-6 text-blue-400" />
+            <div className="flex flex-col items-center space-y-4 text-center group hover:scale-105 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-blue-600/30 border-2 border-blue-400 shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/50 transition-all duration-300">
+                <Shield className="h-8 w-8 text-blue-300 group-hover:text-blue-200 transition-colors duration-300" />
               </div>
-              <h3 className="font-semibold text-white">Authenticity Guaranteed</h3>
-              <p className="text-sm text-gray-400">
+              <h3 className="font-bold text-xl text-white group-hover:text-blue-200 transition-colors duration-300">Authenticity Guaranteed</h3>
+              <p className="text-base text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                 Every figure verified for quality and authenticity
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 text-center">
-              <div className="p-3 rounded-full bg-orange-600/20 border border-orange-500">
-                <Star className="h-6 w-6 text-orange-400" />
+            <div className="flex flex-col items-center space-y-4 text-center group hover:scale-105 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-orange-600/30 border-2 border-orange-400 shadow-lg shadow-orange-500/25 group-hover:shadow-orange-500/50 transition-all duration-300">
+                <Star className="h-8 w-8 text-orange-300 group-hover:text-orange-200 transition-colors duration-300" />
               </div>
-              <h3 className="font-semibold text-white">Premium Quality</h3>
-              <p className="text-sm text-gray-400">
+              <h3 className="font-bold text-xl text-white group-hover:text-orange-200 transition-colors duration-300">Premium Quality</h3>
+              <p className="text-base text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                 High-end collectibles from trusted manufacturers
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 text-center">
-              <div className="p-3 rounded-full bg-purple-600/20 border border-purple-500">
-                <Zap className="h-6 w-6 text-purple-400" />
+            <div className="flex flex-col items-center space-y-4 text-center group hover:scale-105 transition-all duration-300">
+              <div className="p-4 rounded-2xl bg-purple-600/30 border-2 border-purple-400 shadow-lg shadow-purple-500/25 group-hover:shadow-purple-500/50 transition-all duration-300">
+                <Zap className="h-8 w-8 text-purple-300 group-hover:text-purple-200 transition-colors duration-300" />
               </div>
-              <h3 className="font-semibold text-white">Fast Shipping</h3>
-              <p className="text-sm text-gray-400">
+              <h3 className="font-bold text-xl text-white group-hover:text-purple-200 transition-colors duration-300">Fast Shipping</h3>
+              <p className="text-base text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                 Quick and secure delivery to your doorstep
               </p>
             </div>

@@ -193,16 +193,17 @@ body {
 }
 
 .product-card {
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
+  background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--hero-gray)) 100%);
+  border: 2px solid hsl(var(--border));
   border-radius: var(--radius);
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border-color: hsl(var(--primary));
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 10px 30px hsl(var(--hero-blue) / 0.2);
+  border-color: hsl(var(--hero-blue));
 }
 
 .hero-banner {
@@ -225,4 +226,43 @@ body {
 @keyframes shimmer {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
+}
+
+/* Additional utility classes for enhanced styling */
+.border-3 {
+  border-width: 3px;
+}
+
+.drop-shadow-2xl {
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.35));
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px hsl(var(--hero-blue) / 0.5);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px hsl(var(--hero-orange) / 0.5);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgb(147, 51, 234, 0.5);
 }
